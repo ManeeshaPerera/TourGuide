@@ -8,6 +8,8 @@ const port = 8000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
+//to enable access from other originsd
 app.use(function(req, res, next) {
   res.header('Access-Control-Allow-Origin', "*");
   res.header('Access-Control-Allow-Methods','GET,PUT,POST,DELETE');
